@@ -12,6 +12,29 @@ BookBot is a text analysis tool that helps you analyze text files by providing w
 
 - Python 3.x
 
+## Setup
+
+1. Create a `books` directory in the same location as `main.py`
+2. Place your text files in the `books` directory
+
+### Downloading Sample Books
+
+You can download Moby Dick from Project Gutenberg (text file)using either curl or wget:
+
+Using curl:
+```bash
+mkdir -p books
+curl -o books/mobydick.txt https://www.gutenberg.org/cache/epub/2701/pg2701.txt
+```
+
+Using wget:
+```bash
+mkdir -p books
+wget -O books/mobydick.txt https://www.gutenberg.org/cache/epub/2701/pg2701.txt
+```
+
+
+
 ## Usage
 
 Run the program from the command line by providing a path to a text file:
@@ -22,8 +45,14 @@ python3 main.py <path_to_book>
 
 ## Example
 
-To analyze Moby Dick:
+1. First, create a `books` directory and place your text file in it:
+```bash
+mkdir books
+# Copy your text file into the books directory
+cp mobydick.txt books/
+```
 
+2. Then run the analysis:
 ```bash
 python3 main.py books/mobydick.txt
 ```
